@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <h2>Cocktails List</h2>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-sm ml-5 mt-10">
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1886&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <p class="card-text">Original and delitghful coktail !!</p>
+            <%= link_to "Details", cocktail_path(cocktail.id), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="button">
+<%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-secondary" %>
+</div>
+
+
