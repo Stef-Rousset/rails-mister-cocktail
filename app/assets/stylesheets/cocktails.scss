@@ -32,6 +32,7 @@ h3 {
   font-weight: bold;
   color: grey;
 }
+// index
 .details {
   background-color: #EEEEEE;
   margin-top: 10px;
@@ -40,8 +41,20 @@ h3 {
   .add {
     margin-left: 50px;
   }
+.list {
+  display: flex;
+  flex-direction: column;
 }
+.ingredient {
+    display: flex;
+    align-items: center;
+}
+// show
 .back {
  display: flex;
  justify-content: center;
 }
+.card {
+  width: 300px;
+}
+

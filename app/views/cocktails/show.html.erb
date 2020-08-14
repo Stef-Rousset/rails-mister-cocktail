@@ -2,14 +2,17 @@
   <h2>Cocktail selected</h2>
     <div class="details">
       <h3><%= @cocktail.name.capitalize %></h3>
-      <ul><% @cocktail.doses.each do | dose| %>
-        <li><%= dose.description %> : <%= dose.ingredient.name %></li>
-        <li><%= cl_image_tag @article.photo.key, height: 300, width: 300, crop: :fill %></li>
-        <%= link_to "Delete",
+      <%= cl_image_tag @cocktail.photo.key, height: 150, width: 150, crop: :fit, class: 'picture' %>
+      <ul class="list">
+        <% @cocktail.doses.each do | dose| %>
+        <div class="ingredient">
+          <li><%= dose.description %> : <%= dose.ingredient.name %></li>
+          <%= link_to  '<i class="fas fa-trash-alt"></i>'.html_safe,
               dose_path(dose),
               method: :delete,
-              data: {confim: "Are you sure ?"} %>
-        <% end %>
+              data: { confirm: "Are you sure?" } %>
+          <% end %>
+          </div>
       </ul>
 
       <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary add"%>
@@ -18,3 +21,4 @@
       <%= link_to "Back to list", cocktails_path, class: "btn btn-secondary" %>
     </div>
 </div>
+
