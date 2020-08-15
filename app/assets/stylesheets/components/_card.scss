@@ -1,0 +1,52 @@
+// card-show
+
+.card-product {
+  display: flex;
+  margin-top: 30px;
+  box-shadow: 1px 1px 3px #DDDDDD;
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  h3 {
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: grey;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  li {
+    background-color: #FF843B;
+    color: white;
+    width: 150px;
+    height: 50px;
+    margin: 10px 10px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+    a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    padding-left: 0px;
+    margin-right: 25px;
+  }
+    a:hover {
+    opacity: 1;
+    color: black;
+    text-decoration: none;
+    }
+}
+.ingredient {
+    display: flex;
+    align-items: center;
+}
+

@@ -1,24 +1,25 @@
 <div class="container">
   <h2>Cocktail selected</h2>
-    <div class="details">
-      <h3><%= @cocktail.name.capitalize %></h3>
-      <%= cl_image_tag @cocktail.photo.key, height: 150, width: 150, crop: :fit, class: 'picture' %>
-      <ul class="list">
-        <% @cocktail.doses.each do | dose| %>
-        <div class="ingredient">
-          <li><%= dose.description %> : <%= dose.ingredient.name %></li>
-          <%= link_to  '<i class="fas fa-trash-alt"></i>'.html_safe,
-              dose_path(dose),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
-          <% end %>
-          </div>
-      </ul>
-
-      <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary add"%>
+  <div class="card-product">
+    <%= cl_image_tag @cocktail.photo.key, height: 150, width: 150, crop: :fit, class: 'picture' %>
+    <div class="card-details">
+        <h3><%= @cocktail.name.capitalize %></h3>
+        <ul class="list">
+          <% @cocktail.doses.each do | dose| %>
+          <div class="ingredient">
+            <li><%= dose.description %> : <%= dose.ingredient.name %></li>
+            <%= link_to  '<i class="fas fa-trash-alt"></i>'.html_safe,
+                dose_path(dose),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            <% end %>
+            </div>
+        </ul>
     </div>
-    <div class="back">
-      <%= link_to "Back to list", cocktails_path, class: "btn btn-secondary" %>
-    </div>
+  </div>
+  <div class="back">
+        <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary add"%>
+        <%= link_to "Back to list", cocktails_path, class: "btn btn-secondary" %>
+  </div>
 </div>
 
