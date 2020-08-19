@@ -1,8 +1,12 @@
 <div class="container">
   <h2>Cocktail selected</h2>
   <div class="card-product">
-    <%= cl_image_tag @cocktail.photo.key, height: 150, width: 150, crop: :fit, class: 'picture' %>
-    <div class="card-details">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 150, width: 150, crop: :fit, class: 'picture' %>
+      <% else %>
+        <%= cl_image_tag "eepfjqdvo9epwzddhtog", alt: "coktail", width: 286, height:200, crop: :fit %>
+      <% end %>
+      <div class="card-details">
         <h3><%= @cocktail.name.capitalize %></h3>
         <ul class="list">
           <% @cocktail.doses.each do | dose| %>
