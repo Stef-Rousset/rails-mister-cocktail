@@ -8,5 +8,5 @@ environment.plugins.prepend('Provide',
     Popper: ['popper.js', 'default']
   })
 )
-
+environment.loaders.delete('nodeModules');
 module.exports = environment

@@ -1,29 +1,35 @@
-
-<div class="container">
-  <h2>Cocktails List</h2>
-  <div class="row">
-      <% @cocktails.each do |cocktail| %>
-      <div class="col-sm ml-5 mt-10">
-        <div class="card" style="width: 18rem;">
-          <% if cocktail.photo.attached? %>
-            <%= cl_image_tag cocktail.photo.key, alt: 'cocktail', width: 300, height:200, crop: :fit %>
-          <% else %>
-            <%= cl_image_tag "eepfjqdvo9epwzddhtog", alt: "coktail", width: 286, height:200, crop: :fit %>
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title"><%= cocktail.name.capitalize %></h5>
-            <p class="card-text">Original and delitghful coktail !!</p>
-            <%= link_to "Details", cocktail_path(cocktail.id), class: "btn btn-secondary" %>
+<div class="main-container d-flex">
+  <div class="container">
+    <h2>Cocktails List</h2>
+    <div class="row">
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-sm ml-5 mt-10">
+          <div class="card" style="width: 18rem;">
+            <% if cocktail.photo.attached? %>
+              <%= cl_image_tag cocktail.photo.key, alt: 'cocktail', width: 300, height:200, crop: :fit %>
+            <% else %>
+              <%= cl_image_tag "eepfjqdvo9epwzddhtog", alt: "coktail", width: 286, height:200, crop: :fit %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title"><%= cocktail.name.capitalize %></h5>
+              <p class="card-text">Original and delitghful coktail !!</p>
+              <%= link_to "Details", cocktail_path(cocktail.id), class: "btn btn-secondary" %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    <div class="bouton">
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-dark" %>
+    </div>
+  </div>
+  <div class=" d-flex disply-map">
+    <h2>Nous rejoindre</h2>
+    <div id="map" style="height: 700px; width: 600px"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
-<div class="bouton">
-  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-dark" %>
-</div>
-
 
 
 
