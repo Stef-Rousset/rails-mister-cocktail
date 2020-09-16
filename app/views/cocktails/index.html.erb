@@ -1,6 +1,7 @@
-<div class="main-container d-flex">
+<div class="main-container">
+
   <div class="container">
-    <h2>Cocktails List</h2>
+    <h2>Our cocktails</h2>
     <div class="row">
         <% @cocktails.each do |cocktail| %>
         <div class="col-sm ml-5 mt-10">
@@ -19,13 +20,20 @@
         </div>
       <% end %>
     </div>
-    <div class="bouton">
-    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-dark" %>
+    <div class="buttons">
+      <div class="bouton">
+      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-dark" %>
+      </div>
+      <div class="back_index">
+        <%= link_to "Back to list", cocktails_path, class: "btn btn-dark" if params[:query].present? %>
+      </div>
     </div>
   </div>
-  <div class=" d-flex disply-map">
+
+  <div class="display-map">
+    <hr>
     <h2>Nous rejoindre</h2>
-    <div id="map" style="height: 700px; width: 600px"
+    <div id="map" style="height: 300px; width: 100%"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>

@@ -1,0 +1,14 @@
+<div class="search_bar">
+    <%= form_tag cocktails_path, class: "search d-flex", method: :get do %>
+      <div class="barre">
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Margarita"
+        %>
+      </div>
+      <div>
+        <%= submit_tag "Recherche", class: "btn btn-secondary" %>
+      </div>
+    <% end %>
+</div>

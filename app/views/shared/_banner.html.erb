@@ -3,6 +3,7 @@
   <div class="container">
     <h1>Le Bar du coin vous propose de <strong>fantastiques cocktails</strong></h1>
     <p>Venez les gouter !!!</p>
+      <%= render "shared/search" if (controller.controller_name == "cocktails" && controller.action_name == "index") %>
   </div>
 </div>
 
