@@ -74,4 +74,16 @@ hr {
   width: 400px;
   }
 }
-
+// index
+.buttons {
+  display: flex;
+}
+.bouton, .back_index {
+  width: 250px;
+  margin: auto;
+  margin-top: 30px;
+  a {
+  font-size: 20px;
+  margin-bottom: 30px;
+  }
+}

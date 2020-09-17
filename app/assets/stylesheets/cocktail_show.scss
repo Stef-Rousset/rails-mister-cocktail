@@ -2,27 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-// index
-.buttons {
-  display: flex;
-}
-.bouton, .back_index {
-  width: 250px;
+.container {
+  width: 1000px;
   margin: auto;
-  margin-top: 30px;
-  a {
-  font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  h2 {
+    margin-top: 20px;
   }
 }
-
-// show
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
 .back {
  display: flex;
  justify-content: space-evenly;
  margin-top: 40px;
   a {
-    width: 175px;
+    width: 200px;
   }
 }

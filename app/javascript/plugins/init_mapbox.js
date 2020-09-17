@@ -13,7 +13,7 @@ const initMapbox = () => {
 
      // create the popup
     const popup = new mapboxgl.Popup({ offset: 25 })
-    .setHTML("<h2>Le bar du coin</h2><p>16 villa Gaudelet 75011 Paris</p>")
+    .setHTML("<h2>El Cubano</h2><p>16 villa Gaudelet 75011 Paris</p>")
     .setMaxWidth("300px");
 
     new mapboxgl.Marker()
