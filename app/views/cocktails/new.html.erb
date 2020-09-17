@@ -1,15 +1,16 @@
+
 <div class="container">
-  <h2>Add a new cocktail</h2>
+  <%= image_tag "unnamed.png", alt: "verre", class: "verre" %>
+    <div class="form">
+      <h2>Ajouter un nouveau cocktail</h2>
 
-
-  <%= simple_form_for (@cocktail) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Submit cocktail", class: "btn btn-secondary" %>
-  <% end %>
+      <%= simple_form_for (@cocktail) do |f| %>
+        <%= f.input :name, :label => "Nom" %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "Soumettre ce cocktail", class: "btn btn-secondary" %>
+      <% end %>
+    </div>
+  <div class="back">
+    <%= link_to "Retour à la liste", cocktails_path, class: "btn btn-secondary" %>
+  </div>
 </div>
-<div class="back">
-  <%= link_to "Back to list", cocktails_path, class: "btn btn-secondary" %>
-</div>
-
-

@@ -1,0 +1,21 @@
+.container {
+  width: 1000px;
+  margin: auto;
+}
+.form {
+  width: 60%;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.back {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.verre {
+  z-index: 1;
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  width: 200px;
+}
