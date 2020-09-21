@@ -1,3 +1,6 @@
+require 'open-uri'
+require 'nokogiri'
+
 class CocktailsController < ApplicationController
   def index
     if params[:query].present?
@@ -27,7 +30,16 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-  params.require(:cocktail).permit(:name, :ingredients, :photo)
+  params.require(:cocktail).permit(:name, :description, :ingredients, :photo)
   end
 
+  def import
+    @cocktail = Cocktail.find(params[:id])
+    url = "https://www.destinationcocktails.fr/recette/#{@coktail.name}"
+    html_file = open(url).read
+    doc = Nokogiri::HTML(html_file, nil, 'utf-8')
+    doc.search('.recipe-know-area').each do |element|
+      @cocktail.description = element.at('.description').text.strip
+    end
+  end
 end
