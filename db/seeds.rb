@@ -37,11 +37,11 @@ caipirinha.photo.attach(io: file_three, filename: 'caipirinha.png',content_type:
 
 daiquiri = Cocktail.create(name: 'daiquiri')
 file_four = URI.open('https://images.unsplash.com/photo-1527762055594-4956c0c8c617?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80')
-daiquiri.photo.attach(io: file_three, filename: 'daiquiri.png',content_type: 'image/png')
+daiquiri.photo.attach(io: file_four, filename: 'daiquiri.png',content_type: 'image/png')
 
 bikini = Cocktail.create(name: 'bikini')
 file_five = URI.open('https://images.unsplash.com/photo-1578664183076-f8400be8c30b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
-bikini.photo.attach(io: file_three, filename: 'bikini.png',content_type: 'image/png')
+bikini.photo.attach(io: file_five, filename: 'bikini.png',content_type: 'image/png')
 
 puts 'done'
 
