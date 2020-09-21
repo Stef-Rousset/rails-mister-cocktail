@@ -12,6 +12,11 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    name = @cocktail.name
+    url = "https://www.destinationcocktails.fr/recette/#{name}"
+    html_file = open(url).read
+    doc = Nokogiri::HTML(html_file, nil, 'utf-8')
+    @cocktail.description = doc.search('.recipe-know-area').text.strip
   end
 
   def new
@@ -31,15 +36,5 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
   params.require(:cocktail).permit(:name, :description, :ingredients, :photo)
-  end
-
-  def import
-    @cocktail = Cocktail.find(params[:id])
-    url = "https://www.destinationcocktails.fr/recette/#{@coktail.name}"
-    html_file = open(url).read
-    doc = Nokogiri::HTML(html_file, nil, 'utf-8')
-    doc.search('.recipe-know-area').each do |element|
-      @cocktail.description = element.at('.description').text.strip
-    end
   end
 end

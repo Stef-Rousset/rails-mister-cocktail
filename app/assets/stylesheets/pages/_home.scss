@@ -2,15 +2,19 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .container {
   width: 1000px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 .infos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
   margin: 50px 0px;
   h4 {
     font-size: 20px;
@@ -44,15 +48,6 @@ h2 {
     color: black;
   }
 }
-.button {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  a {
-    font-size: 25px;
-    padding: 5px 10px;
-    }
-}
 .display-map {
   display: flex;
   flex-direction: column;
@@ -75,10 +70,9 @@ hr {
   }
 }
 // index
-.buttons {
+.back_index {
   display: flex;
-}
-.bouton, .back_index {
+  justify-content: center;
   width: 250px;
   margin: auto;
   margin-top: 30px;

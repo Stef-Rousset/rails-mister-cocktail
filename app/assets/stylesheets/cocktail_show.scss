@@ -15,6 +15,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 }
+.card-description > p {
+  text-align: justify;
+  padding: 5px 10px;
+}
 .back {
  display: flex;
  justify-content: space-evenly;
