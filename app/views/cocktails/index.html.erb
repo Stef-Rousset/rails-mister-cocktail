@@ -27,9 +27,9 @@
           <div class="col-sm ml-1 mt-10">
             <div class="card" style="width: 14rem;" >
               <% if cocktail.photo.attached? %>
-                <%= cl_image_tag cocktail.photo.key, alt: 'cocktail', width: 222, height:200 %>
+                <%= cl_image_tag cocktail.photo.key, alt: 'cocktail', width: 222, height: 200 %>
               <% else %>
-                <%= cl_image_tag "eepfjqdvo9epwzddhtog", alt: "coktail", width: 286, height:200, crop: :fit %>
+                <%= cl_image_tag "eepfjqdvo9epwzddhtog", alt: "coktail", width: 286, height: 200, crop: :fit %>
               <% end %>
               <div class="card-body">
                 <h5 class="card-title"><%= cocktail.name.capitalize %></h5>
