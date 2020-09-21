@@ -48,6 +48,10 @@ h2 {
     color: black;
   }
 }
+.card > img {
+  object-fit: cover;
+}
+
 .display-map {
   display: flex;
   flex-direction: column;
