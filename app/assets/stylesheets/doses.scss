@@ -1,3 +1,16 @@
 // Place all the styles related to the doses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.back_to {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.verre_two {
+  z-index: 1;
+  position: absolute;
+  right: 100px;
+  bottom: 140px;
+  width: 200px;
+}
