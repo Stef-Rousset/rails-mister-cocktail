@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .container {
-  width: 1000px;
+  width: 1200px;
   margin: auto;
   margin-bottom: 50px;
   h2 {
@@ -26,4 +26,7 @@
   a {
     width: 200px;
   }
+}
+.ingredient {
+  justify-content: left;
 }
