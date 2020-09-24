@@ -1,8 +1,10 @@
 // Specific CSS for your home-page
+
 .main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: calc(100vh - 70px);
 }
 .container {
   width: 1000px;
@@ -73,7 +75,6 @@ hr {
   width: 400px;
   }
 }
-// index
 .back_index {
   display: flex;
   justify-content: center;
