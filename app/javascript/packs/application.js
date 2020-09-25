@@ -17,8 +17,13 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { callApi } from '../plugins/call_api';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initMapbox();
+  callApi();
 });
+
+
+
