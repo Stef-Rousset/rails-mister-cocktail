@@ -1,5 +1,5 @@
 
-<div class="container-show">
+<div class="container-show" id="cocktail_selected" data-name="<%= @cocktail.name %>">
   <h2><%= @cocktail.name.capitalize %></h2>
   <div class="details">
     <div class="card-description">
@@ -26,6 +26,8 @@
           </div>
         <% end %>
       </ul>
+      <h4>Préparation</h4>
+      <p id="preparation"></p>
     </div>
   </div>
   <div class="back">
