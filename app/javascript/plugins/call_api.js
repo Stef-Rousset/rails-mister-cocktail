@@ -1,9 +1,4 @@
 
-// console.log("blabla");
-// const cocktail = document.querySelector('.container-show');
-// const name = cocktail.dataset.name;
-// console.log(name);
-
 const callApi = () => {
 const preparation = document.querySelector("#preparation");
 
